@@ -105,7 +105,7 @@ export default function PieChart() {
 }, [filteredData]);
 
   return (
-  <div style={{ display: 'flex', gap: '2rem', width:'100%', justifyContent:'center' }}>
+  <div style={{ display: 'flex', gap: '2rem', width:'100%', justifyContent:'center' }} className='max-md:flex-col items-center'>
       <svg ref={svgRef}></svg>
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent:'center', gap: '8px' }}>
         {data.map((item) => (
