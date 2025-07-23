@@ -49,10 +49,12 @@ export default function LineChart() {
       .attr('fill', 'none')
       .attr('stroke', '#4CAF50')
       .attr('stroke-width', 5)
+      // @ts-ignore
       .attr('d', line);
 
     g.append('g')
       .attr('transform', `translate(0,${height})`)
+      // @ts-ignore
       .call(d3.axisBottom(x).tickFormat(d3.timeFormat('%d/%m')));
 
     g.append('g')
@@ -60,6 +62,7 @@ export default function LineChart() {
     
       g.append('g')
       .attr('transform', `translate(0,${height})`)
+      // @ts-ignore
       .call(d3.axisBottom(x).tickFormat(d3.timeFormat('%d/%m')))
       .selectAll('path, line, text')
       .attr('stroke', 'black') 
@@ -111,9 +114,11 @@ export default function LineChart() {
       .on('mousemove', function (event) {
         const mouseX = d3.pointer(event, this)[0];
         const x0 = x.invert(mouseX);
+        // @ts-ignore
         const i = d3.bisector(d => d.date).left(formatted, x0, 1);
         const d0 = formatted[i - 1];
         const d1 = formatted[i];
+        // @ts-ignore
         const d = x0 - d0.date > d1.date - x0 ? d1 : d0;
 
         const cx = x(d.date);

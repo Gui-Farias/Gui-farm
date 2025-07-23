@@ -74,7 +74,7 @@ export default function PieChart() {
     .append('path')
     .attr('d', arc)
     .attr('fill', (d) => colorScale(d.data.label))
-    .on('mouseover', function (event, d) {
+    .on('mouseover', function (_e, d) {
       tooltip
         .style('opacity', 1)
         .html(`<strong>${d.data.label}</strong>: ${d.data.value}%`);
