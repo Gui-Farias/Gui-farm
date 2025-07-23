@@ -41,6 +41,13 @@ pnpm i
 # 3. Configure as variáveis de ambiente
 cp .env.example .env
 # edite o .env com suas credenciais Firebase
+VITE_FIREBASE_API_KEY=xxxxxxxxxxxxxxxxx
+VITE_FIREBASE_AUTH_DOMAIN=xxxxxxxxxxxxx
+VITE_FIREBASE_PROJECT_ID=gui-farm-xxxxxx
+VITE_FIREBASE_STORAGE_BUCKET=xxxxxxxxxxxxx
+VITE_FIREBASE_MESSAGING_SENDER_ID=xxxxxxxx
+VITE_FIREBASE_APP_ID=xxxxxxxxxxxxxxxx
+
 
 # 4. Rode a aplicação localmente
 pnpm run dev
