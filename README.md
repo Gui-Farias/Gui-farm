@@ -51,3 +51,8 @@ VITE_FIREBASE_APP_ID=xxxxxxxxxxxxxxxx
 
 # 4. Rode a aplicação localmente
 pnpm run dev
+
+
+
+
+Feito com 💚 por Guilherme Farias
