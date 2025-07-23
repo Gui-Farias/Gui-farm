@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+# GUI Farm 🌿
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **GUI Farm** é uma aplicação moderna desenvolvida com **React + TypeScript**, voltada para a visualização de dados e gestão agrícola. Ela utiliza o **Firebase Authentication** para login seguro e o **Cloud Firestore** como banco de dados em tempo real. Os dados são apresentados através de **gráficos interativos** usando a biblioteca **D3.js**, oferecendo uma experiência visual rica e responsiva para dashboards e análises.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+- **React (TSX)** – Front-end moderno e reativo
+- **TypeScript** – Tipagem estática para maior robustez
+- **Firebase Authentication** – Sistema de autenticação de usuários
+- **Cloud Firestore** – Banco de dados NoSQL em tempo real
+- **D3.js** – Visualização de dados com gráficos interativos
+- **pnpm** – Gerenciador de pacotes ultrarrápido
+- **Vercel** – Hospedagem e deploy automático
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🔐 Funcionalidades
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Cadastro e login de usuários com Firebase Auth
+- Armazenamento de informações personalizadas dos usuários no Firestore
+- Dashboard dinâmico com gráficos atualizados
+- Visualização de dados com animações e interações (hover, tooltip, etc.)
+- Responsividade completa (100% adaptável a diferentes dispositivos)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Instalação e uso com pnpm
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+> Pré-requisitos: Node.js instalado e `pnpm` disponível (`npm install -g pnpm`)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+# 1. Clone o repositório
+git clone https://github.com/seu-usuario/gui-farm.git
+cd gui-farm
+
+# 2. Instale as dependências com pnpm
+pnpm i
+
+# 3. Configure as variáveis de ambiente
+cp .env.example .env
+# edite o .env com suas credenciais Firebase
+
+# 4. Rode a aplicação localmente
+pnpm run dev
