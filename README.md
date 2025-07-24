@@ -2,6 +2,9 @@
 
 A **GUI Farm** é uma aplicação moderna desenvolvida com **React + TypeScript**, voltada para a visualização de dados e gestão agrícola. Ela utiliza o **Firebase Authentication** para login seguro e o **Cloud Firestore** como banco de dados em tempo real. Os dados são apresentados através de **gráficos interativos** usando a biblioteca **D3.js**, oferecendo uma experiência visual rica e responsiva para dashboards e análises.
 
+https://gui-farm.vercel.app
+
+
 ---
 
 ## 🚀 Tecnologias utilizadas
